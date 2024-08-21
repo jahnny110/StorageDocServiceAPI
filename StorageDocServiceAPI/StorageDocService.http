@@ -1,0 +1,22 @@
+@_HostAddress = http://localhost:5000
+
+###
+POST {{_HostAddress}}/documents
+Content-Type: application/json 
+charset:UTF-8
+
+{
+"id": "8",
+"tags": ["important", ".net"],
+"data": {
+    "col": "12",
+    "some": "data",
+    "optional": "fields"
+    }
+}
+
+###
+GET {{_HostAddress}}/documents/8
+Accept: application/json
+
+
